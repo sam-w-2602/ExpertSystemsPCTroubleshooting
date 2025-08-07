@@ -68,7 +68,7 @@ namespace ExpertSystemPC
                         }
                         else if (ShortingConnectorPinWork == "no")
                         {
-                            Console.WriteLine("Ensure all power cables from the psu are plugged in. in particular the 24 pin motherboard connector and the cpu power cables please refer to motherboard manual for info on these cables)");
+                            Console.WriteLine("Ensure all power cables from the psu are plugged in. in particular the 24 pin motherboard connector and the cpu power cables please refer to motherboard manual for info on these cables) if all these cables are plugged in, its most likley a faulty power supply");
                         }
                     }
                     else if (FrontIOHeader == "no")
