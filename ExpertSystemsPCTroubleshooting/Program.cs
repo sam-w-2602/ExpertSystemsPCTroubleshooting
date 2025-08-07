@@ -54,11 +54,23 @@ namespace ExpertSystemPC
                     return;
                 }
             }
+
             else if (PcTurnsOn == "no")
             {
-                Console.WriteLine("Your PC is not turning on at all. Please check the power supply, power cable, and ensure that the power outlet is working. If the issue persists, it could be a power supply or serious hardware failure.");
-                return;
+                Console.WriteLine("Does the pc have power to the power supply (is it pluged in/ does the wall socket work)");
+                string PowerToPC = Console.ReadLine().Trim().ToLower();
+                if (PowerToPC == "yes")
+                {
+                    Console.WriteLine("Your PC is not turning on. Please check the power supply and wall socket. Ensure the power supply is plugged in and the wall socket is working. If the problem persists, consider replacing the power supply.");
+                    return;
+                }
+                if (PowerToPC == "no")
+                {
+                    Console.WriteLine("Please check the power supply and wall socket. Ensure the power supply is plugged in and the wall socket is working. If the problem persists, consider replacing the power supply.");
+                    return;
+                }
             }
+
             else
             {
                 Console.WriteLine("Invalid input. Please answer with 'yes' or 'no'.");
