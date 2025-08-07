@@ -46,7 +46,23 @@ namespace ExpertSystemPC
                     return;
                 }
 
-
+                Console.WriteLine("Does your PC boot into the operating system? (yes/no): ");
+                string BootsOS = Console.ReadLine().Trim().ToLower();
+                if (BootsOS == "no")
+                {
+                    Console.WriteLine("Your PC is turning on and displaying but not booting into the operating system. This could be due to a corrupted OS or hardware issues. Try booting into safe mode or using recovery options. If these dont work, reinsallation of OS is required");
+                    return;
+                }
+            }
+            else if (PcTurnsOn == "no")
+            {
+                Console.WriteLine("Your PC is not turning on at all. Please check the power supply, power cable, and ensure that the power outlet is working. If the issue persists, it could be a power supply or serious hardware failure.");
+                return;
+            }
+            else
+            {
+                Console.WriteLine("Invalid input. Please answer with 'yes' or 'no'.");
+                return;
             }
 
         }//end Main
