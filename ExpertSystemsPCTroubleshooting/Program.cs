@@ -23,7 +23,6 @@ namespace ExpertSystemPC
             Console.WriteLine("This system will help you diagnose issues with your PC.");
             Console.WriteLine("Please answer the following questions to the best of your ability.");
             Console.WriteLine("----------------------------------------------------------------------------------");
-            // Example of a simple diagnostic question
             Console.WriteLine("Is your PC turning on? this includes any signs of life, not just a display. (yes/no): ");
             string PcTurnsOn = Console.ReadLine().Trim().ToLower();
 
