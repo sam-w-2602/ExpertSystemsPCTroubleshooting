@@ -61,8 +61,28 @@ namespace ExpertSystemPC
                 string PowerToPC = Console.ReadLine().Trim().ToLower();
                 if (PowerToPC == "yes")
                 {
-                    Console.WriteLine("Your PC is not turning on. Please check the power supply and wall socket. Ensure the power supply is plugged in and the wall socket is working. If the problem persists, consider replacing the power supply.");
-                    return;
+                    Console.WriteLine("is the front IO header plugged in? (refer to motherboard manual)");
+                    string FrontIOHeader = Console.ReadLine().Trim().ToLower();
+                    if (FrontIOHeader == "yes")
+                    {
+                        Console.WriteLine("unplug it and short power button pins with a screw driver.");
+                        Console.WriteLine("Did the pc turn on?");
+                        string ShortingConnectorPinWork = Console.ReadLine().Trim().ToLower();
+                        if (ShortingConnectorPinWork == "yes")
+                        {
+                            Console.WriteLine("The front IO header is faulty. Replace it or get a new PC Case");
+                        }
+                        else if (ShortingConnectorPinWork == "no")
+                        {
+                            Console.WriteLine("The motherboard is likely faulty. Consider replacing it.");
+                        }
+                    }
+                    else if (FrontIOHeader == "no")
+                    {
+                        Console.WriteLine("Please plug in the front IO header to the motherboard. This is essential for the power button to function.");
+                        return;
+                    }
+
                 }
                 if (PowerToPC == "no")
                 {
