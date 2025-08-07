@@ -7,12 +7,6 @@ Description: Simple expert system to help diagnose PC issues.,
 ,
 Developed for purpose of learning and practice in expert system development.*/
 
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
 namespace ExpertSystemPC
 {
     internal class Program
@@ -74,7 +68,7 @@ namespace ExpertSystemPC
                         }
                         else if (ShortingConnectorPinWork == "no")
                         {
-                            Console.WriteLine("The motherboard is likely faulty. Consider replacing it.");
+                            Console.WriteLine("Ensure all power cables from the psu are plugged in. in particular the 24 pin motherboard connector and the cpu power cables please refer to motherboard manual for info on these cables)");
                         }
                     }
                     else if (FrontIOHeader == "no")
